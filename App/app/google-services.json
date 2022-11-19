@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "867977337150",
+    "project_id": "apollo-app-72a00",
+    "storage_bucket": "apollo-app-72a00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867977337150:android:9cfeacd9b7e401b25e746f",
+        "android_client_info": {
+          "package_name": "com.example.apollo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867977337150-l3ataoq47c5fjslomdqkse34710676o2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI5CjEGeHAO4cVoIsaUlny1XjN5UCkohg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867977337150-l3ataoq47c5fjslomdqkse34710676o2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867977337150:android:77246f437e035c2e5e746f",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867977337150-l3ataoq47c5fjslomdqkse34710676o2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI5CjEGeHAO4cVoIsaUlny1XjN5UCkohg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867977337150-l3ataoq47c5fjslomdqkse34710676o2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

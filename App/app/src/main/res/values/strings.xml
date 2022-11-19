@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Apollo</string>
+    <string name="PasswordTextEdit" />
+    <string name="EmailTextEdit" />
+    <string name="e_mail">e-mail</string>
+    <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="logo">Logo</string>
+    <string name="register">REGISTER</string>
+    <string name="already_registered_sign_in">Already registered, sign in!</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register.</string>
+</resources>

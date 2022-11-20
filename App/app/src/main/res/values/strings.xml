@@ -10,4 +10,5 @@
     <string name="already_registered_sign_in">Already registered, sign in!</string>
     <string name="sign_in">SIGN IN</string>
     <string name="don_t_have_an_account_register">Don\'t have an account? Register.</string>
+    <string name="no">No</string>
 </resources>

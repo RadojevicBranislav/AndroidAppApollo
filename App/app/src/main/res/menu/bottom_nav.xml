@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Home"
+    <item android:title="Astronauts"
         android:id="@+id/home"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:icon="@drawable/astronaut"/>
     <item android:title="Satelite"
         android:id="@+id/satelite"
         android:icon="@drawable/ic_baseline_satellite_alt_24"/>

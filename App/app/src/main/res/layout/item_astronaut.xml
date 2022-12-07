@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="15dp">
 
         <TextView
             android:id="@+id/astronaut"
@@ -23,9 +24,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="100dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="25dp"
-            android:text="astronaut_name"
+            android:layout_marginRight="20dp"
+            android:text="@string/astronaut_name"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -38,7 +40,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="70dp"
-            android:text="astronaut_craft"
+            android:text="@string/astronaut_craft"
             android:textColor="@color/white"
             android:textStyle="normal"
             />

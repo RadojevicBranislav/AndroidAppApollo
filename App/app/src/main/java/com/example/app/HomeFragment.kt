@@ -5,6 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.app.databinding.FragmentHomeBinding
+import com.example.app.model.Astronaut
+import kotlinx.coroutines.NonDisposableHandle.parent
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,12 +26,24 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var AstronautNameList = mutableListOf<String>()
+    private var AstronautCraftList = mutableListOf<String>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        var binding: FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
+
+        postToList()
+
+        binding.astroRecyclerView.layoutManager = LinearLayoutManager(context)
+        binding.astroRecyclerView.adapter = RecyclerAdapter(AstronautNameList, AstronautCraftList)
+
+
     }
 
     override fun onCreateView(
@@ -55,5 +72,18 @@ class HomeFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun addToList(astroName: String, astroCraft: String)
+    {
+        AstronautNameList.add(astroName)
+        AstronautCraftList.add(astroCraft)
+    }
+
+    private fun postToList()
+    {
+        for (i in 1..25){
+            addToList("Title $i", "Description $i")
+        }
     }
 }

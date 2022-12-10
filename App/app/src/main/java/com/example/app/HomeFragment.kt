@@ -1,5 +1,6 @@
 package com.example.app
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,23 +27,19 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var rcv: RecyclerView
+    private lateinit var adapter: RecyclerAdapter
+
     private var AstronautNameList = mutableListOf<String>()
     private var AstronautCraftList = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-        var binding: FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
-
-        postToList()
-
-        binding.astroRecyclerView.layoutManager = LinearLayoutManager(context)
-        binding.astroRecyclerView.adapter = RecyclerAdapter(AstronautNameList, AstronautCraftList)
-
 
     }
 
@@ -85,5 +82,30 @@ class HomeFragment : Fragment() {
         for (i in 1..25){
             addToList("Title $i", "Description $i")
         }
+
+
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        postToList()
+
+        val layoutManager = LinearLayoutManager(context)
+
+        rcv = view.findViewById(R.id.astro_recycler_view)
+
+        rcv.layoutManager = layoutManager
+
+        rcv.setHasFixedSize(true)
+
+        adapter = RecyclerAdapter(AstronautNameList, AstronautCraftList)
+
+        rcv.adapter = adapter
+
+
+
+
     }
 }
